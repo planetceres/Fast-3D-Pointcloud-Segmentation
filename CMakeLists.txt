@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 2.8.3)
 project(supervoxel_clustering)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
+# add_compile_options(-std=c++11)
+add_compile_options(-std=c++14)
 
 ## Option to compile with or withour ROS compatibility (through Catkin)
 ## To use this package without ROS support call cmake with the option: -DUSE_CATKIN=OFF
@@ -19,8 +20,9 @@ if(USE_CATKIN)
 endif(USE_CATKIN)
 
 ## System dependencies are found with CMake's conventions
-find_package(PCL 1.8 REQUIRED)
+find_package(PCL 1.9 REQUIRED)
 find_package(OpenCV REQUIRED)
+
 
 ###################################
 ## catkin specific configuration ##
